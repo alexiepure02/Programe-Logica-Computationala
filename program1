@@ -268,6 +268,9 @@ def interpretare(f, nr):
 
     f = inlocuire_in_propozitie(f, nr)
 
+    if f[len(f) - 1] == '0':                                    # daca nu s-a construit arbore
+        f.pop()
+
     continua = any(i in conectori or i == '¬' for i in f)
 
     while continua:
